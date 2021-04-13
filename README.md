@@ -73,3 +73,4 @@ Using the private key you could generate a public (and distributable) key
 openssl rsa -in baseKey.pem -pubout -outform PEM -out publicKey.pem
 ```
 
+# dispat-api

@@ -21,6 +21,7 @@ public class TokenSecuredResource {
 
     @Inject
     JsonWebToken jwt;
+
     @Inject
     @Claim(standard = Claims.birthdate)
     String birthdate;

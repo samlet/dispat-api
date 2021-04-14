@@ -3,7 +3,7 @@ package com.bluecc.api;
 import com.bluecc.api.tests.TokenUtils;
 import org.eclipse.microprofile.jwt.Claims;
 import org.jose4j.jwt.JwtClaims;
-import org.junit.jupiter.api.Test;
+import org.junit.Test;
 
 import java.util.Arrays;
 

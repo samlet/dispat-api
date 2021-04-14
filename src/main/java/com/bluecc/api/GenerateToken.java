@@ -26,3 +26,4 @@ public class GenerateToken {
         // claim value if this claim has not already been set.
     }
 }
+

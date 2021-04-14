@@ -20,8 +20,21 @@ dependencies {
     implementation 'io.quarkus:quarkus-smallrye-jwt-build'
     implementation 'io.quarkus:quarkus-arc'
     implementation 'io.quarkus:quarkus-resteasy'
-    testImplementation 'io.quarkus:quarkus-junit5'
+
+    implementation 'com.hubspot.jinjava:jinjava:2.5.7'
+    implementation 'org.reflections:reflections:0.9.12'
+
+    // https://mvnrepository.com/artifact/com.uber.cadence/cadence-client
+    implementation group: 'com.uber.cadence', name: 'cadence-client', version: '2.7.8'
+    implementation group: 'commons-configuration', name: 'commons-configuration', version: '1.9'
+    implementation group: 'ch.qos.logback', name: 'logback-classic', version: '1.2.3'
+
+    testImplementation 'junit:junit:4.12'
+//    testImplementation 'io.quarkus:quarkus-junit4'
     testImplementation 'io.rest-assured:rest-assured'
+    testImplementation 'org.assertj:assertj-core'
+
+    compile files('lib/ofbiz.jar')
 }
 
 group 'com.bluecc.api'

@@ -1,0 +1,18 @@
+[
+  {
+    "fromAddress": "ofbiztest@example.com",
+    "bodyScreenLocation": "component://party/widget/partymgr/EmailPartyScreens.xml#ChangePersonalInfoNotification",
+    "subject": "Personal Information Updated",
+    "productStoreId": "9000",
+    "bccAddress": "ofbiztest@example.com",
+    "emailType": "UPD_PRSNL_INF_CNFRM"
+  },
+  {
+    "emailType": "PRDS_EMAIL_VERIFY",
+    "fromAddress": "ofbiztest@example.com",
+    "productStoreId": "9000",
+    "subject": "Email Address Verification",
+    "bodyScreenLocation": "component://party/widget/partymgr/EmailPartyScreens.xml#VerifyEmailAddressNotification",
+    "bccAddress": "ofbiztest@example.com"
+  }
+]

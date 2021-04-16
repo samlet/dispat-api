@@ -1,0 +1,12 @@
+[
+  {
+    "groupName": "Order Processing",
+    "groupId": "ORDERPROC",
+    "description": "Admin group for restricted order processing."
+  },
+  {
+    "groupId": "ORDERENTRY",
+    "groupName": "Order Entry",
+    "description": "Order Entry Admin group; permissions for creating orders."
+  }
+]

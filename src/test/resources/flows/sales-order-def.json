@@ -1,0 +1,49 @@
+[
+  {
+    "id": "orderHeader",
+    "service": "createOrderHeader",
+    "input": {
+      "currencyUom": "USD",
+      "webSiteId": "WebStore",
+      "orderTypeId": "SALES_ORDER",
+      "statusId": "ORDER_APPROVED",
+      "salesChannelEnumId": "WEB_SALES_CHANNEL"
+    },
+    "output": {
+      "orderId": "$.data.orderId"
+    }
+  },
+  {
+    "id": "orderItem_1",
+    "service": "storeValuesCc",
+    "input": {
+      "values": [
+        {
+          "type": "entity",
+          "entityName": "OrderItem",
+          "value": {
+            "orderId": "{{orderHeader.orderId}}",
+            "orderItemTypeId": "PRODUCT_ORDER_ITEM",
+            "statusId": "ITEM_APPROVED"
+          }
+        }
+      ]
+    }
+  },
+  {
+    "id": "orderItemPriceInfo",
+    "service": "createOrderItemPriceInfo",
+    "input": {
+      "orderId": "{{orderHeader.orderId}}",
+      "modifyAmount": -9.6,
+      "productPriceActionSeqId": "01",
+      "description": "[PRODUCT_CATEGORY_IDIsPROMOTIONS] [list:48.0;avgCost:48.0;margin:0.0] [type:PRICE_POL]",
+      "orderItemSeqId": "00001",
+      "productPriceRuleId": "9000"
+    },
+    "output": {
+      "orderItemPriceInfoId": "$.data.orderItemPriceInfoId"
+    }
+  }
+
+]

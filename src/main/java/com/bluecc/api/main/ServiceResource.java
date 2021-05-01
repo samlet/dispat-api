@@ -1,4 +1,4 @@
-package com.bluecc.api;
+package com.bluecc.api.main;
 
 import org.eclipse.microprofile.jwt.Claim;
 import org.eclipse.microprofile.jwt.Claims;

@@ -2,6 +2,7 @@ package com.bluecc.api.models;
 
 import com.bluecc.api.models.party.party.Person;
 import com.fasterxml.jackson.annotation.JsonInclude;
+import com.fasterxml.jackson.core.type.TypeReference;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;
@@ -39,6 +40,9 @@ public class ModelTest {
             Map<String, Object> map = oMapper.convertValue(obj, Map.class);
             System.out.println(map);
             Person p=oMapper.convertValue(map, Person.class);
+            System.out.println(p);
+            TypeReference<Person> ref = new TypeReference<Person>() { };
+            p=oMapper.convertValue(map, ref);
             System.out.println(p);
         });
     }

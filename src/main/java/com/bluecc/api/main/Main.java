@@ -1,4 +1,4 @@
-package com.bluecc.api;
+package com.bluecc.api.main;
 
 import io.quarkus.runtime.Quarkus;
 import io.quarkus.runtime.QuarkusApplication;

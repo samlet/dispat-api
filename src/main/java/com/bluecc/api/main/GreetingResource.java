@@ -1,4 +1,4 @@
-package com.bluecc.api;
+package com.bluecc.api.main;
 
 import javax.ws.rs.GET;
 import javax.ws.rs.Path;

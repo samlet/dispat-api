@@ -1,0 +1,67 @@
+[
+  {
+    "id": "orderHeader",
+    "service": "createOrderHeader",
+    "input": {
+      "productStoreId": "9000",
+      "grandTotal": 50.85,
+      "entryDate": "2008-04-23 16:49:27.392",
+      "createdBy": "admin",
+      "remainingSubTotal": 38.4,
+      "visitId": "10002",
+      "invoicePerShipment": "Y",
+      "orderDate": "2008-04-23 16:49:27.392",
+      "currencyUom": "USD",
+      "webSiteId": "WebStore",
+      "priority": "2",
+      "orderTypeId": "SALES_ORDER",
+      "statusId": "ORDER_APPROVED",
+      "salesChannelEnumId": "WEB_SALES_CHANNEL"
+    },
+    "output": {
+      "orderId": "$.data.orderId"
+    }
+  },
+  {
+    "id": "orderItem_1",
+    "service": "storeValuesCc",
+    "input": {
+      "values": [
+        {
+          "type": "entity",
+          "entityName": "OrderItem",
+          "value": {
+            "orderId": "{{orderHeader.orderId}}",
+            "orderItemTypeId": "PRODUCT_ORDER_ITEM",
+            "isPromo": "N",
+            "selectedAmount": 0.0,
+            "productId": "GZ-2644",
+            "unitListPrice": 48.0,
+            "isModifiedPrice": "N",
+            "unitPrice": 38.4,
+            "orderItemSeqId": "00001",
+            "prodCatalogId": "DemoCatalog",
+            "itemDescription": "Round Gizmo",
+            "quantity": 2.0,
+            "statusId": "ITEM_APPROVED"
+          }
+        }
+      ]
+    }
+  },
+  {
+    "id": "orderItemPriceInfo",
+    "service": "createOrderItemPriceInfo",
+    "input": {
+      "orderId": "{{orderHeader.orderId}}",
+      "modifyAmount": -9.6,
+      "productPriceActionSeqId": "01",
+      "description": "[PRODUCT_CATEGORY_IDIsPROMOTIONS] [list:48.0;avgCost:48.0;margin:0.0] [type:PRICE_POL]",
+      "orderItemSeqId": "00001",
+      "productPriceRuleId": "9000"
+    },
+    "output": {
+      "orderItemPriceInfoId": "$.data.orderItemPriceInfoId"
+    }
+  }
+]

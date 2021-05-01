@@ -1,4 +1,4 @@
-package com.bluecc.api;
+package com.bluecc.api.main;
 import javax.annotation.security.PermitAll;
 import javax.annotation.security.RolesAllowed;
 import javax.enterprise.context.RequestScoped;

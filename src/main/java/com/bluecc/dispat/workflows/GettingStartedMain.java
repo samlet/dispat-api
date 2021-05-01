@@ -10,5 +10,4 @@ public class GettingStartedMain {
         worker.registerWorkflowImplementationTypes(GettingStarted.HelloWorldImpl.class);
         factory.start();
     }
-
 }
